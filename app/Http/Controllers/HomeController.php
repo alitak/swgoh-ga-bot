@@ -2,11 +2,6 @@
 
 namespace App\Http\Controllers;
 
-/**
- * Description of HomeController
- *
- * @author alitak
- */
 class HomeController extends Controller
 {
 
