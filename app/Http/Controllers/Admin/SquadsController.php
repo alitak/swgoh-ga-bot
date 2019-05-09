@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+
 /**
  * Description of SquadsController
  *
@@ -11,7 +12,8 @@ class SquadsController extends \App\Http\Controllers\Controller
 
     public function index()
     {
-        dd('squads');
+        $characters = \App\Models\Character::all();
+        return view('admin/squads/index', compact('characters'));
     }
 
 }

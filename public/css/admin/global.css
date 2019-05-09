@@ -1,0 +1,54 @@
+.char-wrapper {
+    width: 80px;
+    float: left;
+    margin: 0 5px 0 4px;
+}
+#characters .char-wrapper {
+    height: 140px;
+    margin: 0 6px 10px 7px;
+}
+.squads .char-wrapper {
+}
+.char-name {
+
+}
+.character .char-portrait {
+    float: left;
+    margin-right: 10px;
+}
+
+.char-portrait {
+    background-color: #000;
+    border-radius: 50px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+.char-portrait-light-side .char-portrait-image {
+    border-color: #3f8cba;
+    box-shadow: 0 0 3px 2px rgba(63,140,186,.8) inset;
+}
+.char-portrait-image {
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    vertical-align: top;
+    position: relative;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #333;
+    background-color: #000;
+    box-shadow: 0 0 3px 2px rgba(0,0,0,.8) inset;
+}
+.char-portrait-img {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    background-color: #111;
+}
