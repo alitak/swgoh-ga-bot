@@ -1,3 +1,39 @@
+.start_hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.fade_out {
+    visibility: hidden;
+    opacity: 0;
+    transition:
+        visibility 0s 1s,
+        opacity 1s linear;
+}
+
+.fade_in {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+
+
+@keyframes fall-right {
+    0% {
+        transform: translate3d(0, 0, 0px);
+    }
+    40% {
+        transform: translate3d(-50px, 0, 0px);
+    }
+    100% {
+        transform: translate3d(5000px, 0, 0px);
+    }
+}
+.fall-right {
+    animation: fall-right 1.0s 1;
+}
+
+
 .char-wrapper {
     width: 80px;
     float: left;
@@ -9,6 +45,12 @@
 }
 .squads .char-wrapper {
 }
+
+.delete-squad {
+    top: 5px;
+    right: 5px;    
+}
+
 .char-name {
 
 }

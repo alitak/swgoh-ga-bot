@@ -18,7 +18,7 @@
             </div>        </div>        
         <div id="characters" class="w-100">
             @foreach ($characters as $character)
-            <div class="char-wrapper" data-base_id="{{ $character->base_id }}">
+            <div class="char-wrapper" data-base_id="{{ $character->base_id }}" data-id="{{ $character->id }}">
                 <div class="char-portrait">
                     <div class="char-portrait-image">
                         <img class="char-portrait-img" src="{{ $character->image }}">
@@ -31,6 +31,7 @@
                 </div>
             </div>
             @endforeach
+            <div class="clearfix"></div>
         </div>
     </div>
     <div class="col-5">
@@ -48,105 +49,9 @@
             </div>
         </div>
         <div class="row squads">
-            <div class="card w-100">
-                <div class="card-body">
-                    <div class="char-wrapper" data-base_id="BOSSK">
-                        <div class="char-portrait">
-                            <div class="char-portrait-image">
-                                <img class="char-portrait-img" src="//swgoh.gg/static/img/assets/tex.charui_bossk.png">
-                            </div>
-                        </div>
-                        <div class="char-name text-center">
-                            Bossk
-                        </div>
-                    </div>
-                    <div class="char-wrapper" data-base_id="BOSSK">
-                        <div class="char-portrait">
-                            <div class="char-portrait-image">
-                                <img class="char-portrait-img" src="//swgoh.gg/static/img/assets/tex.charui_bossk.png">
-                            </div>
-                        </div>
-                        <div class="char-name text-center">
-                            Bossk
-                        </div>
-                    </div>
-                    <div class="char-wrapper" data-base_id="BOSSK">
-                        <div class="char-portrait">
-                            <div class="char-portrait-image">
-                                <img class="char-portrait-img" src="//swgoh.gg/static/img/assets/tex.charui_bossk.png">
-                            </div>
-                        </div>
-                        <div class="char-name text-center">
-                            Bossk
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card w-100">
-                <div class="card-body">
-                    <div class="char-wrapper" data-base_id="BOSSK">
-                        <div class="char-portrait">
-                            <div class="char-portrait-image">
-                                <img class="char-portrait-img" src="//swgoh.gg/static/img/assets/tex.charui_bossk.png">
-                            </div>
-                        </div>
-                        <div class="char-name text-center">
-                            Bossk
-                        </div>
-                    </div><div class="char-wrapper" data-base_id="BOSSK">
-                        <div class="char-portrait">
-                            <div class="char-portrait-image">
-                                <img class="char-portrait-img" src="//swgoh.gg/static/img/assets/tex.charui_bossk.png">
-                            </div>
-                        </div>
-                        <div class="char-name text-center">
-                            Bossk
-                        </div>
-                    </div><div class="char-wrapper" data-base_id="BOSSK">
-                        <div class="char-portrait">
-                            <div class="char-portrait-image">
-                                <img class="char-portrait-img" src="//swgoh.gg/static/img/assets/tex.charui_bossk.png">
-                            </div>
-                        </div>
-                        <div class="char-name text-center">
-                            Bossk
-                        </div>
-                    </div><div class="char-wrapper" data-base_id="BOSSK">
-                        <div class="char-portrait">
-                            <div class="char-portrait-image">
-                                <img class="char-portrait-img" src="//swgoh.gg/static/img/assets/tex.charui_bossk.png">
-                            </div>
-                        </div>
-                        <div class="char-name text-center">
-                            Bossk
-                        </div>
-                    </div><div class="char-wrapper" data-base_id="BOSSK">
-                        <div class="char-portrait">
-                            <div class="char-portrait-image">
-                                <img class="char-portrait-img" src="//swgoh.gg/static/img/assets/tex.charui_bossk.png">
-                            </div>
-                        </div>
-                        <div class="char-name text-center">
-                            Bossk
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card w-100">
-                <div class="card-body">
-                    squad12
-                </div>
-            </div>
-            <div class="card w-100">
-                <div class="card-body">
-                    squad12
-                </div>
-            </div>
-            <div class="card w-100">
-                <div class="card-body">
-                    squad12
-                </div>
-            </div>
+            @foreach ($squads as $squad)
+            @include('admin/squads/partials/squad')
+            @endforeach
         </div>
     </div>
 </div>

@@ -17,6 +17,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::namespace('Admin')->middleware('auth')->group(function () {
     Route::get('squads', 'SquadsController@index')->name('admin-squads');
+    Route::post('squads/store', 'SquadsController@store')->name('admin-squads-store');
+    Route::post('squads/delete', 'SquadsController@delete')->name('admin-squads-delete');
 });
 
 // @todo move to command
