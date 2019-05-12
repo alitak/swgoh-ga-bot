@@ -14,8 +14,8 @@ class SyncController extends Controller
 
     public function characters()
     {
-//        $characters = json_decode(url_get_contents(config('swgoh.api.base') . config('swgoh.api.characters')));
-        $characters = json_decode(\Storage::get('characters.json'));
+        $characters = json_decode(url_get_contents(config('swgoh.api.base') . config('swgoh.api.characters')));
+//        $characters = json_decode(\Storage::get('characters.json'));
         foreach ($characters as $character) {
 
             $char = \App\Models\Character::updateOrCreate(['base_id' => $character->base_id], [
