@@ -78,5 +78,7 @@ $('document').ready(function () {
         $("#search_character").val("");
         $("#characters .char-wrapper").show();
         return false;
-    })
+    });
+
+    $("#ally_code").mask("000-000-000");
 });

@@ -39,6 +39,9 @@
     float: left;
     margin: 0 5px 0 4px;
 }
+.char-wrapper.not-in-stock {
+    opacity: 0.3;
+}
 #characters .char-wrapper {
     height: 140px;
     margin: 0 6px 10px 7px;

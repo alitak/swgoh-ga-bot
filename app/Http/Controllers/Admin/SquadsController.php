@@ -14,7 +14,7 @@ class SquadsController extends \App\Http\Controllers\Controller
     {
         $characters = \App\Models\Character::all();
         $squads = \App\Models\Squad::orderBy('id', 'desc')->get();
-        return view('admin/squads/index', compact('characters', 'squads'));
+        return view('admin/squads/index', compact('characters', 'squads'))->with(['admin' => true]);
     }
 
     public function store(\Illuminate\Http\Request $request)

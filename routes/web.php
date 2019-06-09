@@ -12,8 +12,8 @@
  */
 Auth::routes(['register' => false]);
 
-Route::get('/', 'HomeController@index');
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'SquadsController@index')->name('squads');
+Route::post('squads/mysquads', 'SquadsController@mysquads')->name('squads-mysquads');
 
 Route::namespace('Admin')->middleware('auth')->group(function () {
     Route::get('squads', 'SquadsController@index')->name('admin-squads');
