@@ -8,7 +8,7 @@
             <form action="{{ Route('squads-mysquads') }}" method="POST">
                 @csrf
                 <div class="form-group">
-                    <input type="text" class="form-control" name="ally_code" id="ally_code" placeholder="Ally code" value="186991324">
+                    <input type="text" class="form-control" name="ally_code" id="ally_code" placeholder="Ally code" value="">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

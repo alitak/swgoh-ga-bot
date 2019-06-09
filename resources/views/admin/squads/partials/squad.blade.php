@@ -5,7 +5,7 @@
         <div class="char-wrapper @if (!$squad->{"is_character_" . ($key + 1)}) not-in-stock @endif"  data-base_id="{{ $character->base_id }}" data-id="{{ $character->id }}">
             <div class="char-portrait">
                 <div class="char-portrait-image">
-                    <img class="char-portrait-img" src="https://swgoh.gg{{ $character->image }}">
+                    <img class="char-portrait-img" src="{{ $character->image }}">
                 </div>
             </div>
             <div class="char-name text-center">
