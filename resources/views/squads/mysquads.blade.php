@@ -12,7 +12,7 @@
 
         </div>
         <div class="card-body">
-            <div class="row squads">
+            <div class="row squads mysquads">
                 @foreach ($squads as $squad)
                 <div class="col-md-6 mb-3">
                     @include('admin/squads/partials/squad', ["admin" => false])
