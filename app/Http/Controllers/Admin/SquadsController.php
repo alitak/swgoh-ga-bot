@@ -24,7 +24,7 @@ class SquadsController extends \App\Http\Controllers\Controller
             $squad->{'character_' . ($key + 1) . '_id'} = $character_id;
         }
         if ($squad->save()) {
-            return response(['data' => view('admin/squads/partials/squad', compact('squad'))->with(['show_hidden' => true])->render()]);
+            return response(['data' => view('admin/squads/partials/squad', compact('squad'))->with(['show_hidden' => true, 'admin' => true])->render()]);
         }
         return response(null, 500);
     }
